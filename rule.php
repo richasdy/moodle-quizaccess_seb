@@ -295,7 +295,9 @@ class quizaccess_seb extends quiz_access_rule_base {
         }
 
         // If the rule is active, enforce a secure view whilst taking the quiz.
-        $PAGE->set_pagelayout('secure');
+        // richasdy
+        // $PAGE->set_pagelayout('secure');
+        
         $this->prevent_display_blocks();
 
         if ($this->accessmanager->should_validate_basic_header() && !$this->accessmanager->validate_basic_header()) {
@@ -457,7 +459,9 @@ class quizaccess_seb extends quiz_access_rule_base {
         $page->set_cacheable(false);
         $page->set_popup_notification_allowed(false); // Prevent message notifications.
         $page->set_heading($page->title);
-        $page->set_pagelayout('secure');
+
+        // richasdy
+        // $page->set_pagelayout('secure');
     }
 
     /**
